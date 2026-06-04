@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-03T12:00:00Z",
+  "title": "Design System: Holon",
+  "extensions": {
+    "colorMeta": {
+      "primary":            { "role": "primary",  "displayName": "Holon Teal",       "canonical": "oklch(65% 0.135 203)", "tonalRamp": ["#003D4A","#005466","#006B82","#00829E","#00A4C4","#33B9D3","#66CEE1","#99E2EE","#CCF1F7"] },
+      "primary-deep":       { "role": "primary",  "displayName": "Teal Diep",        "canonical": "oklch(53% 0.11 203)",  "tonalRamp": ["#002D38","#003D4A","#004D5E","#005E72","#007A94","#3395AA","#66AFC0","#99CAD6","#CCE5EC"] },
+      "primary-light":      { "role": "primary",  "displayName": "Teal Waas",        "canonical": "oklch(95% 0.025 203)", "tonalRamp": ["#A0D8E5","#B3E1EB","#C5EBF2","#D4F0F6","#E8F5F9","#EDF7FA","#F2FAFB","#F7FBFD","#FBFEFE"] },
+      "neutral-ink":        { "role": "neutral",  "displayName": "Inkt",             "canonical": "oklch(18% 0.01 255)",  "tonalRamp": ["#0A0C10","#111318","#1C1F24","#282C33","#363A42","#565B65","#767B87","#A0A5B0","#D0D3DA"] },
+      "neutral-dark":       { "role": "neutral",  "displayName": "Nacht Marine",     "canonical": "oklch(17% 0.04 248)",  "tonalRamp": ["#040A14","#071422","#0A192F","#0F2440","#163052","#2A4B70","#4C718F","#7DA0BD","#B8CEDD"] },
+      "neutral-mid":        { "role": "neutral",  "displayName": "Grijslaag",        "canonical": "oklch(53% 0.01 264)",  "tonalRamp": ["#1F2025","#2D2F36","#404248","#555760","#6B7280","#8D9099","#AEB3BB","#CDD0D6","#ECEEF1"] },
+      "neutral-bg-warm":    { "role": "neutral",  "displayName": "Warm Canvas",      "canonical": "oklch(97% 0.003 85)",  "tonalRamp": ["#9C9A96","#B5B2AE","#CCCAC7","#E1E0DD","#EEEDEA","#F4F4F1","#F7F6F4","#FAFAF8","#FDFCFB"] },
+      "neutral-bg-surface": { "role": "neutral",  "displayName": "Warm Oppervlak",   "canonical": "oklch(95% 0.006 75)",  "tonalRamp": ["#918F8A","#AAA8A3","#C3C1BB","#D8D7D2","#E7E5E0","#EEECE8","#F1EFE9","#F4F3F0","#FAF9F7"] },
+      "white-tinted":       { "role": "neutral",  "displayName": "Wit Getint",       "canonical": "oklch(98% 0.003 75)",  "tonalRamp": ["#A8A6A1","#C0BEBA","#D5D4CF","#E8E6E2","#F1EFEB","#F6F5F2","#F9F8F5","#FDFCFB","#FEFEFE"] }
+    },
+    "typographyMeta": {
+      "display":  { "displayName": "Display",  "purpose": "Homepage hero en primaire pagina-titels. Maximaal één per pagina." },
+      "headline": { "displayName": "Headline", "purpose": "Sectie-koppen, service-titels, leidende quote-koppen." },
+      "title":    { "displayName": "Title",    "purpose": "Card-titels, sub-sectie-koppen, navigatie-items." },
+      "body":     { "displayName": "Body",     "purpose": "Lopende tekst. Max 65–75ch regellengte." },
+      "label":    { "displayName": "Label",    "purpose": "Navigatie-labels, categorietaggen, overline-tekst boven koppen." }
+    },
+    "shadows": [
+      { "name": "hover-lift",   "value": "0 4px 20px rgba(28, 31, 36, 0.08)",    "purpose": "Hover-staat op klikbare kaarten en CTA-blokken." },
+      { "name": "cta-ambient",  "value": "0 8px 40px rgba(28, 31, 36, 0.12)",    "purpose": "Permanente schaduw op primaire CTA-knop en grote CTA-secties." },
+      { "name": "input-focus",  "value": "0 0 0 3px rgba(0, 164, 196, 0.20)",   "purpose": "Focus-ring op form-inputs. Teal-getint." }
+    ],
+    "motion": [
+      { "name": "ease-out-quart", "value": "cubic-bezier(0.25, 1, 0.5, 1)",  "purpose": "Standaard easing voor state-transities (hover, focus, menu)." },
+      { "name": "duration-fast",  "value": "150ms",                           "purpose": "Kleur- en opacity-transities (hover-kleur, border-kleur)." },
+      { "name": "duration-base",  "value": "250ms",                           "purpose": "Transform-transities (hover-lift, menu open/dicht)." }
+    ],
+    "breakpoints": [
+      { "name": "sm",  "value": "640px"  },
+      { "name": "md",  "value": "768px"  },
+      { "name": "lg",  "value": "1024px" },
+      { "name": "xl",  "value": "1280px" },
+      { "name": "2xl", "value": "1536px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primaire actie-knop. Teal achtergrond, wit tekst, licht afgerond.",
+      "html": "<button class=\"ds-btn-primary\">Plan een gesprek</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: #00A4C4; color: #fff; padding: 14px 36px; border-radius: 8px; border: none; font-family: Inter, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 600; letter-spacing: 0.01em; cursor: pointer; transition: background 150ms cubic-bezier(0.25,1,0.5,1), transform 250ms cubic-bezier(0.25,1,0.5,1), box-shadow 250ms cubic-bezier(0.25,1,0.5,1); box-shadow: 0 8px 40px rgba(28,31,36,0.12); text-decoration: none; } .ds-btn-primary:hover { background: #007A94; transform: translateY(-1px); box-shadow: 0 12px 48px rgba(0,122,148,0.25); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(0,164,196,0.35); } .ds-btn-primary:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Ghost Button (light)",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secundaire actie op lichte achtergrond. Transparant, donkere border.",
+      "html": "<button class=\"ds-btn-ghost\">Meer over onze diensten</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: #0A192F; padding: 13px 35px; border-radius: 8px; border: 1.5px solid #0A192F; font-family: Inter, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 600; letter-spacing: 0.01em; cursor: pointer; transition: background 150ms cubic-bezier(0.25,1,0.5,1), border-color 150ms cubic-bezier(0.25,1,0.5,1), color 150ms cubic-bezier(0.25,1,0.5,1); text-decoration: none; } .ds-btn-ghost:hover { border-color: #00A4C4; color: #00A4C4; } .ds-btn-ghost:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(0,164,196,0.2); }"
+    },
+    {
+      "name": "Ghost Button (inverted)",
+      "kind": "button",
+      "refersTo": "button-ghost-inverted",
+      "description": "Secundaire actie op donkere achtergrond. Transparant, witte border.",
+      "html": "<button class=\"ds-btn-ghost-inv\">Contacteer ons</button>",
+      "css": ".ds-btn-ghost-inv { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: #FDFCFB; padding: 13px 35px; border-radius: 8px; border: 1.5px solid rgba(253,252,251,0.6); font-family: Inter, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 600; letter-spacing: 0.01em; cursor: pointer; transition: background 150ms cubic-bezier(0.25,1,0.5,1), border-color 150ms cubic-bezier(0.25,1,0.5,1); text-decoration: none; } .ds-btn-ghost-inv:hover { border-color: #FDFCFB; background: rgba(253,252,251,0.1); } .ds-btn-ghost-inv:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(253,252,251,0.3); }"
+    },
+    {
+      "name": "Form Input",
+      "kind": "input",
+      "refersTo": "input-default",
+      "description": "Tekstveld voor contactformulier. Wit getint, teal focus-ring.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-label\" for=\"ds-inp\">Naam</label><input class=\"ds-input\" id=\"ds-inp\" type=\"text\" placeholder=\"Jan Janssens\" /></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; } .ds-label { font-family: Inter, system-ui, sans-serif; font-size: 0.8125rem; font-weight: 600; color: #374151; letter-spacing: 0.01em; } .ds-input { font-family: Inter, system-ui, sans-serif; font-size: 1rem; font-weight: 400; color: #1C1F24; background: #FDFCFB; border: 2px solid #D1D5DB; border-radius: 12px; padding: 14px 16px; transition: border-color 150ms cubic-bezier(0.25,1,0.5,1), box-shadow 150ms cubic-bezier(0.25,1,0.5,1); } .ds-input:hover { border-color: #9CA3AF; } .ds-input:focus { outline: none; border-color: #00A4C4; box-shadow: 0 0 0 3px rgba(0,164,196,0.2); } .ds-input::placeholder { color: #9CA3AF; }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": null,
+      "description": "Klikbare service-kaart op de homepage. Vlak in rust, lift bij hover.",
+      "html": "<div class=\"ds-service-card\"><div class=\"ds-service-icon\"><svg width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z\" /></svg></div><h3 class=\"ds-service-title\">SAP-CO Consultancy</h3><p class=\"ds-service-desc\">Expert begeleiding bij uw SAP Controlling implementaties en optimalisaties.</p><span class=\"ds-service-cta\">Meer info <svg width=\"14\" height=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9 5l7 7-7 7\" /></svg></span></div>",
+      "css": ".ds-service-card { background: #FDFCFB; border: 1px solid #E5E7EB; border-radius: 12px; padding: 36px 32px; cursor: pointer; transition: border-color 150ms cubic-bezier(0.25,1,0.5,1), box-shadow 250ms cubic-bezier(0.25,1,0.5,1), transform 250ms cubic-bezier(0.25,1,0.5,1); } .ds-service-card:hover { border-color: rgba(0,164,196,0.3); box-shadow: 0 4px 20px rgba(28,31,36,0.08); transform: translateY(-2px); } .ds-service-icon { width: 44px; height: 44px; background: #E8F5F9; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #00A4C4; margin-bottom: 24px; } .ds-service-title { font-family: Inter, system-ui, sans-serif; font-size: 1.1875rem; font-weight: 700; color: #1C1F24; margin: 0 0 10px; letter-spacing: -0.01em; } .ds-service-desc { font-family: Inter, system-ui, sans-serif; font-size: 1rem; font-weight: 400; color: #6B7280; line-height: 1.65; margin: 0 0 24px; } .ds-service-cta { display: inline-flex; align-items: center; gap: 6px; font-family: Inter, system-ui, sans-serif; font-size: 0.8125rem; font-weight: 600; color: #00A4C4; letter-spacing: 0.05em; text-transform: uppercase; transition: gap 150ms cubic-bezier(0.25,1,0.5,1); } .ds-service-card:hover .ds-service-cta { gap: 10px; }"
+    },
+    {
+      "name": "Quote Block",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Citaat van Mark of een klant. Geen aanhalingstekens als decoratief element; grote italic tekst met attribuut.",
+      "html": "<blockquote class=\"ds-quote\"><p class=\"ds-quote-text\">Wij slaan de brug tussen wat de business nodig heeft en wat SAP kan leveren.</p><cite class=\"ds-quote-attr\">Mark De Backer — Oprichter, Holon</cite></blockquote>",
+      "css": ".ds-quote { margin: 0; padding: 56px 64px; background: #F4F3F0; border-radius: 0; } .ds-quote-text { font-family: Inter, system-ui, sans-serif; font-size: 1.375rem; font-weight: 400; font-style: italic; color: #374151; line-height: 1.65; max-width: 640px; margin: 0 0 20px; } .ds-quote-attr { display: block; font-family: Inter, system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #6B7280; letter-spacing: 0.08em; text-transform: uppercase; font-style: normal; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Sticky witte nav met HOLON logo-mark, diensten-dropdown, taalswitch.",
+      "html": "<nav class=\"ds-nav\"><div class=\"ds-nav-inner\"><a class=\"ds-nav-logo\" href=\"/\">HOLON<span class=\"ds-nav-bar\"></span></a><div class=\"ds-nav-links\"><a class=\"ds-nav-link\" href=\"/diensten\">Diensten</a><a class=\"ds-nav-link\" href=\"/referenties\">Referenties</a><a class=\"ds-nav-link ds-nav-link--active\" href=\"/contact\">Contact</a></div></div></nav>",
+      "css": ".ds-nav { position: sticky; top: 0; z-index: 50; background: #FDFCFB; border-bottom: 1px solid #E5E7EB; } .ds-nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; height: 80px; display: flex; align-items: center; justify-content: space-between; } .ds-nav-logo { display: flex; align-items: center; font-family: Inter, system-ui, sans-serif; font-size: 1.25rem; font-weight: 700; color: #0A192F; letter-spacing: -0.02em; text-decoration: none; gap: 8px; } .ds-nav-bar { display: inline-block; width: 3px; height: 22px; background: #00A4C4; border-radius: 2px; } .ds-nav-links { display: flex; align-items: center; gap: 32px; } .ds-nav-link { font-family: Inter, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 500; color: #374151; text-decoration: none; transition: color 150ms cubic-bezier(0.25,1,0.5,1); } .ds-nav-link:hover, .ds-nav-link--active { color: #00A4C4; } .ds-nav-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(0,164,196,0.2); border-radius: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "De Vertrouwde Expert",
+    "overview": "Een architect-studio website in dienst van een vakman. Het design spreekt niet over expertise, het demonstreert haar. Ruimte, typografische precisie, en de portretfoto van Mark als anker van vertrouwen: dit is een site die zijn persoonlijkheid laat zien, niet zijn PowerPoint-slides.\n\nDe esthetiek is editoriaal en licht. Warme off-white achtergronden, teal als een chirurgisch accent dat zelden en doelbewust wordt ingezet. Grote koppen met strakke letter-spacing, brede regelafstand in de body, en quote-blokken die ruimte krijgen om te resoneren. De hiërarchie is duidelijk; er wordt nooit gevochten om aandacht.\n\nDit systeem verwerpt uitdrukkelijk: corporate SAP-partner grijsblauw, SaaS startup neon-gradients en hero-metrics, en Big Four navy-goud stijlkaarten met mensen in pak. Holon is geen Deloitte. Holon is één expert die zijn werk grondig kent.",
+    "keyCharacteristics": [
+      "Warm licht — off-white als canvas, niet klinisch wit",
+      "Teal als accent, niet als thema: ≤10% van elke pagina",
+      "Mark's portret is een eersterangselement, geen bijlage",
+      "Quote-blokken krijgen typografische ruimte en gewicht",
+      "Spacing varieert bewust voor ritme; identieke padding is monotonie",
+      "Eén primaire actie per pagina; geen informatiedoolhof"
+    ],
+    "rules": [
+      { "name": "De Eén-Signaal Regel",   "body": "Teal verschijnt op ≤10% van elke pagina. Elke keer dat het gebruikt wordt, trekt het de oogbal. Zijn zeldzaamheid is zijn kracht. Gebruik het nooit decoratief.", "section": "colors" },
+      { "name": "De Warmte Regel",         "body": "Geen pure #ffffff of #000000. Elk neutraal is licht getint naar warm of naar het Holon-teal toe.", "section": "colors" },
+      { "name": "De Ruimte Regel",         "body": "Body-tekst krijgt line-height: 1.7 en een max-breedte van 65–75ch. Tekst die breder strekt wordt moeilijk te lezen.", "section": "typography" },
+      { "name": "De Gewicht Regel",        "body": "Twee gewichten: 400 (body) en 600–700 (alle koppen). Nooit 300 of lighter in UI-context.", "section": "typography" },
+      { "name": "De Flat-By-Default Regel","body": "Schaduwen zijn een staat, geen decoratie. Een kaart in rust is vlak. Alleen hover, focus, en primaire CTA-elementen mogen schaduwen dragen.", "section": "elevation" }
+    ],
+    "dos": [
+      "Gebruik Mark's portretfoto als primair visueel element op de homepage en de masterclass-pagina.",
+      "Laat de teal zeldzaam zijn. Eén teal-element per schermgebied is sterk. Drie zijn zwak.",
+      "Varieer de sectie-achtergronden voor ritme: warm canvas → wit → warm oppervlak → donker → warm canvas.",
+      "Gebruik grote Inter 700 koppen met negatieve letter-spacing op display-formaat.",
+      "Laat quote-blokken ruimte ademen. Minimaal 80px boven en onder.",
+      "Toon de referentielijst prominent. 30+ top-Belgische bedrijven is het sterkste bewijs."
+    ],
+    "donts": [
+      "Geen generieke SAP-partner look: corporate blauw-grijs, partner-badge-prominentie, 'digital transformation'-beloftes zonder inhoud.",
+      "Geen SaaS-startup esthetiek: hero-metrics met grote getallen, neon-gradients, 'disruption'-taal, glassmorphism-kaarten.",
+      "Geen Big Four-imitatie: navy + goud kleurpalet, stockfoto's van mensen in pak, 'thought leadership' PDF-downloads als primaire CTA.",
+      "Geen side-stripe borders (border-left of border-right groter dan 1px als kleuraccent op kaarten of callouts).",
+      "Geen gradient-tekst (background-clip: text met gradient).",
+      "Geen identieke kaart-grids: vier dezelfde kaarten met icoon + kop + tekst.",
+      "Geen slider/carousel op de homepage.",
+      "Nooit #000000 of #ffffff puur als achtergrond of tekst.",
+      "Geen knoppen als pill (border-radius groter dan 12px op knoppen)."
+    ]
+  }
+}

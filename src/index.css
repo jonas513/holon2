@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+  --color-holon-teal:      #00A4C4;
+  --color-holon-teal-deep: #007A94;
+  --color-holon-teal-wash: #E8F5F9;
+  --color-holon-dark:      #0A192F;
+  --color-holon-ink:       #1C1F24;
+  --color-holon-mid:       #6B7280;
+  --color-holon-subtle:    #D1D5DB;
+  --color-holon-canvas:    #FAFAF8;
+  --color-holon-surface:   #F4F3F0;
+  --color-holon-white:     #FDFCFB;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FAFAF8;
+  color: #1C1F24;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
